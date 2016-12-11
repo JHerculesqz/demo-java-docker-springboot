@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>doctor</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <script type="text/javascript" language="JavaScript" src="lib/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="lib/RobotUtils.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/module/tools.js?time="></script>
+    <script type="text/javascript" language="JavaScript" src="js/module/record.js?time="></script>
+    <script type="text/javascript" language="JavaScript" src="js/module/login.js?time="></script>
+    <script type="text/javascript" language="JavaScript" src="js/module/reg.js?time="></script>
+    <script type="text/javascript" language="JavaScript" src="js/module/bodyproblem.js?time=1"></script>
+    <script type="text/javascript" language="JavaScript" src="js/module/robot.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/module/chat.js?time="+new Date()></script>
+    <script type="text/javascript" language="JavaScript" src="js/index.js"></script>
+</head>
+<body>
+<div id="main" class="wrapper">
+    <div id="left"></div>
+    <div id="right" class="dialogWrapper">
+        <div id="chatrecord" class="chatrecord"></div>
+        <div id="chat" class="chat">
+            <img id="imgmp" class="imgmp" src="images/microPhone2.png">
+            <input id="iptbox" class="iptbox" type="text">
+            <!--<input type="button" class="btnsend" id="btnsend" value="发送">-->
+            <img id="btnsend" class="imgmp" src="images/send.png">
+        </div>
+    </div>
+</div>
+<iframe id="iframespeech" src="speech.html" width="1px" height="1px"></iframe>
+</body>
+</html>

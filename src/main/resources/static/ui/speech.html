@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <title>语音识别</title>
+</head>
+<body>
+<button id='startBtn' onclick="start();">开始</button>
+<button id="stopBtn" onclick="stop();">停止</button>
+<div id="msgInput">对着你的麦克风大声说吧...</div>
+<script type="text/javascript" src='lib/js/fingerprint2.min.js'></script>
+<script type="text/javascript" src="lib/js/iat.all.js"></script>
+<script type="text/javascript" src="lib/js/CIATUtils.js"></script>
+<script type="text/javascript">
+    function init() {
+        document.getElementById("msgInput").innerHTML = "";
+        cATUtils.init(function (strMsg) {
+            window.parent.speechFromChild(strMsg);
+            document.getElementById("msgInput").innerHTML = strMsg;
+        });
+    }
+
+
+    function start() {
+        cATUtils.start("581dcc9a", "5fd627de2b35a6fe");
+        document.getElementById("msgInput").innerHTML = " 对着你的麦克风大声说吧...";
+    }
+
+
+    window.onload = function () {
+        init();
+        start();
+    }
+
+</script>
+</body>
+</html>
