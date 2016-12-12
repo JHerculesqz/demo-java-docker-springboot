@@ -18,7 +18,7 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 //for docker
-group = 'crystal'
+group = 'jherculesqz'
 apply plugin: 'docker'
 
 jar {

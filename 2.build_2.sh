@@ -1,0 +1,1 @@
+./gradlew build && java -jar build/libs/demo-java-docker-springboot-1.0.0.jar
