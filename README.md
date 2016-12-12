@@ -2,13 +2,29 @@
 演示SpringBoot+Gradle+Docker
 
 ##实现步骤(腾讯云)##
-**STEP1.先把云端Linux配置好**
+**STEP1.先把云端Linux基础配置好**
 	
-	1.安装FTP，注意FTPServer的文件夹设置成可读写
-	2.安装SecureCRT
+	1.安装SecureCRT
+		-修改root密码
+		-sudo -s
+		-sudo passwd
+	2.安装FTP
+		-注意FTPServer的文件夹设置成可读写
+		-chmod 777 /opt
 	3.安装jdk
 		-http://www.linuxidc.com/Linux/2016-05/131348.htm
 		-即使有docker，我就要安装jdk，怎么滴怎么滴怎么滴?
+
+**STEP2.Install Docker on Ubuntu**
+	
+	https://docs.docker.com/engine/installation/linux/ubuntulinux/
+	注意"$ echo "<REPO>" | sudo tee /etc/apt/sources.list.d/docker.list"这一步
+
+**STEP3.启动Docker Deamon**
+	
+	sudo service docker start
+	sudo docker images
+	sudo docker pull jherculesqz/demo-java-docker-springboot
 	
 ##Docker##
 ###Docker基本用法 ###
@@ -39,7 +55,7 @@
 	docker rmi <image_name>
 	docker history <image_id>
 	
-**2.crud custom repository to dockerhub**
+**2.crud custom repository to dockerhub(未完待续,待我过了TR5)**
 	
 	STEP1.init for server
 		docker search <image_name>:<image_version>
@@ -54,7 +70,7 @@
 	STEP4.use image
 		docker pull jherculesqz/test
 	
-**3.custom hub**
+**3.custom hub(未完待续,待我过了TR5)**
 	
 	STEP1.init for server
 		docker run -d -p 5000:5000 --restart=always --name registry registry
@@ -72,7 +88,7 @@
 	STEP5.use image
 		docker pull jherculesqz/test
 	
-## 实现步骤(本地) ##
+## 实现步骤(本地Springboot)(未完待续,待我过了TR5) ##
 **STEP1.编写build.gradle**
 	
 	dependencies {
@@ -120,20 +136,7 @@
 	
 	https://spring.io/guides/gs/spring-boot-docker/
 	https://hub.docker.com/u/jherculesqz/
-
-
-
-**STEP1.Install Docker on Ubuntu**
-	
-	https://docs.docker.com/engine/installation/linux/ubuntulinux/
-	潜规则：注意"$ echo "<REPO>" | sudo tee /etc/apt/sources.list.d/docker.list"这一步
-
-**STEP2.启动Docker Deamon**
-	
-	sudo service docker start
-	sudo docker images
-	sudo docker pull jherculesqz/demo-java-docker-springboot
-	
+		
 ## Reference ##
 		
 	https://spring.io/guides/gs/spring-boot-docker/	
